@@ -48,6 +48,7 @@ function trendClass(trend) {
 }
 
 /** ========= BOOT ========= **/
+supabase = getSupabase();
 async function boot() {
   const tgUser = getTelegramUser();
 
