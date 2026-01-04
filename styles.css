@@ -71,12 +71,22 @@ button{font:inherit}
   flex-direction:column;
 }
 
-.topbar{
-  padding:14px 16px 10px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  justify-content:space-between;
+.tabbar{
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 22px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+}
+.tabbtn{
+  height: 50px;
+  min-width: 90px;
+  border-radius: 16px;
 }
 
 .brand{
