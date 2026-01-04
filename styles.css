@@ -17,18 +17,19 @@ html, body {
   overflow: hidden;
 }
 :root{
-  --bg:#070A12;
-  --panel:#0E1430;
-  --panel2:#0B1026;
-  --txt:#EAF2FF;
-  --muted:#94A3B8;
-  --neon:#7CFFB2;
-  --hot:#FF4D8D;
-  --cyan:#5DE8FF;
-  --gold:#FFD86B;
-  --stroke: rgba(255,255,255,.10);
-  --shadow: rgba(0,0,0,.55);
-  --radius: 18px;
+  --bg1: rgba(10, 14, 20, 0.92);
+  --bg2: rgba(20, 12, 26, 0.92);
+  --glass: rgba(255,255,255,0.06);
+  --stroke: rgba(255,255,255,0.10);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.60);
+}
+
+body{
+  background: radial-gradient(1200px 700px at 18% 18%, rgba(0,255,200,0.10), transparent 55%),
+              radial-gradient(1200px 700px at 82% 10%, rgba(255,0,170,0.10), transparent 55%),
+              linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: var(--text);
 }
 
 *{box-sizing:border-box}
