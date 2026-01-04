@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRUST Creator</title>
+
+  <!-- Telegram WebApp -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="title">
+          <b>TRUST Creator</b>
+          <span id="subtitle">nostalgia money game • Nokia vibes</span>
+        </div>
+      </div>
+
+      <div class="pills">
+        <div class="pill" id="pillRole">роль: …</div>
+        <div class="pill" id="pillStars">★ …</div>
+      </div>
+    </div>
+
+    <div class="main" id="main">
+      <!-- Контент вкладок вставляем из JS -->
+    </div>
+
+    <div class="tabs">
+      <div class="tabbar">
+        <div class="tab active" data-tab="trust">
+          <div class="ico">📟</div>
+          <b>TRUST</b>
+        </div>
+        <div class="tab" data-tab="growth">
+          <div class="ico">📈</div>
+          <b>Рост</b>
+        </div>
+        <div class="tab" data-tab="profile">
+          <div class="ico">🧩</div>
+          <b>Профиль</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Artist full screen -->
+  <div class="modal" id="modal">
+    <div class="sheet" id="sheet">
+      <!-- JS -->
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="./config.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
