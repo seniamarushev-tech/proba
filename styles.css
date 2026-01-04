@@ -1,3 +1,21 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;            /* убираем скролл body */
+  overscroll-behavior: none;   /* убираем “резинку” */
+  touch-action: manipulation;  /* меньше случайных жестов */
+  -webkit-text-size-adjust: 100%;
+}
+
+* { box-sizing: border-box; }
+
+#app {
+  height: 100vh;
+  height: 100svh; /* для мобилок */
+  width: 100%;
+  overflow: hidden;
+}
 :root{
   --bg:#070A12;
   --panel:#0E1430;
