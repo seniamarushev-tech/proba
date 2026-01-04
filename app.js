@@ -777,14 +777,30 @@ function escapeAttr(s) {
 }
 
 // Boot
-boot().catch((e) => {
-  console.error(e);
+// Boot
+boot().catch(async (e) => {
+  console.error("BOOT ERROR:", e);
+
+  // Попробуем вытащить максимум информации
+  let details = "";
+  try {
+    details = JSON.stringify(e, Object.getOwnPropertyNames(e), 2);
+  } catch {
+    details = String(e);
+  }
+
   elMain.innerHTML = `
     <div class="card">
       <div class="h1">Ошибка запуска</div>
-      <div class="small muted">Проверь config.js (SUPABASE_URL/ANON_KEY) и наличие таблиц.</div>
+      <div class="small muted">Скопируй текст ниже и пришли мне — я скажу точную причину за 10 секунд.</div>
       <div class="hr"></div>
-      <pre class="small muted" style="white-space:pre-wrap">${escapeHTML(e.message || String(e))}</pre>
+      <pre class="small muted" style="white-space:pre-wrap; user-select:text">
+${escapeHTML(details)}
+      </pre>
+      <div class="hr"></div>
+      <div class="small muted">
+        Быстрый чек: файл <b>config.js</b> рядом с index.html? Ключи реальные? Таблицы существуют?
+      </div>
     </div>
   `;
 });
