@@ -1,7 +1,7 @@
 import { getSupabase } from "./supabaseClient.js";
 import { getTelegramUser, haptic } from "./telegram.js";
 
-const supabase = getSupabase();
+let supabase;
 const cfg = window.TRUST_CONFIG;
 
 const elMain = document.getElementById("main");
