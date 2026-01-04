@@ -132,7 +132,23 @@ button{font:inherit}
   margin:10px 0;
   position:relative;
 }
+.card{
+  background: var(--glass);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  box-shadow: 0 14px 50px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
 
+.pixel-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.20);
+}
 .card::before{
   content:"";
   position:absolute; inset:0;
